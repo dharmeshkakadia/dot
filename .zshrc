@@ -14,6 +14,10 @@ pip
 lein
 cp
 fasd
+#history-substring-search
+#zsh-users/zsh-completions
+#andrewferrier/fzf-z
+mvn
 supercrabtree/k
 zsh-users/zsh-syntax-highlighting
 EOBUNDLES
