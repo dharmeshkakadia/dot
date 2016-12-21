@@ -1,0 +1,10 @@
+// Settings in here override those in "Default/Preferences.sublime-settings",
+// and are overridden in turn by syntax-specific settings.
+{
+	"font_size": 15,
+	"word_wrap": true,
+	"open_files_in_new_window": false,
+	"scroll_past_end": true,
+	"spell_check": true,
+	"dictionary": "Packages/Language - English/en_US.dic"
+}
