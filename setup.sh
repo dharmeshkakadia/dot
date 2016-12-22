@@ -1,11 +1,11 @@
 #[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 brew tap homebrew/science caskroom/versions
-brew install fasd wget R jq httpie youtube-dl m-cli fish
+brew install fasd wget R jq httpie youtube-dl m-cli fish 
 
 #brew install scala ruby
 
-brew cask install java spotify chrome firefox dropbox sublime flux intellij-idea-ce vlc atom
+brew cask install java spotify chrome firefox dropbox sublime flux intellij-idea-ce vlc atom hyper
 
 #webdev
 brew install watchman flow
