@@ -14,6 +14,7 @@ brew install yarn
 npm install -g react-native-cli yo
 
 apm install nuclide
+apm install minimap
 
 #code fonts
 brew tap caskroom/fonts
