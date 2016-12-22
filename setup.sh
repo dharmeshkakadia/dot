@@ -14,7 +14,7 @@ brew install yarn
 npm install -g react-native-cli yo
 
 apm install nuclide
-apm install minimap
+apm install minimap minimap-find-and-replace minimap-highlight-selected linter open-recent highlight-selected linter-csslint linter-htmlhint linter-jshint auto-detect-indentation less-than-slash
 
 #code fonts
 brew tap caskroom/fonts
