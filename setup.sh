@@ -36,6 +36,7 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 #VS code
 
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
+defaults write com.apple.finder AppleShowAllFiles YES
 
 #references
 # http://jeroenjanssens.com/2013/09/19/seven-command-line-tools-for-data-science.html
