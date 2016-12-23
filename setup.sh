@@ -25,6 +25,8 @@ ext install githistory "vscode-icons" lukehoban.Go robertohuertasm.vscode-icons
 
 gem install bundler
 
+yarn global add structor -g
+
 # from https://coderwall.com/p/euwpig/a-better-git-log
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
