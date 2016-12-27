@@ -40,6 +40,8 @@ git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Crese
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 defaults write com.apple.finder AppleShowAllFiles YES
 
+#restore anywhere option of trust
+sudo spctl --master-disable
 #references
 # http://jeroenjanssens.com/2013/09/19/seven-command-line-tools-for-data-science.html
 # https://github.com/clarkgrubb/data-tools
