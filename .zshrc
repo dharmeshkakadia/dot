@@ -10,6 +10,7 @@ antigen use oh-my-zsh
 
 antigen bundle <<EOBUNDLES
 git
+docker
 pip
 lein
 cp
