@@ -9,7 +9,7 @@ brew cask install java spotify chrome firefox dropbox sublime flux intellij-idea
 
 #webdev
 brew install watchman flow
-brew install yarn
+brew cask install ngrok
 
 npm install -g react-native-cli yo
 
