@@ -49,3 +49,4 @@ sudo spctl --master-disable
 
 #Little command line REST client that you can use in pipelines
 #https://github.com/micha/resty
+ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/sublime
