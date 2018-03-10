@@ -1,54 +1,39 @@
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Users/dharmeshkakadia/bin"
-export GOPATH=$HOME/Git-Repo/gospace
-
-# Set CLICOLOR if you want Ansi Colors in iTerm2
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Users/dharmesh/.antigen/bundles/robbyrussell/oh-my-zsh/lib:/Users/dharmesh/bin"
 export CLICOLOR=1
 
 source /usr/local/share/antigen/antigen.zsh
 
 antigen use oh-my-zsh
 
-antigen bundle <<EOBUNDLES
-git
-docker
-pip
-lein
-cp
-fasd
-kubectl
-#history-substring-search
-#zsh-users/zsh-completions
-#andrewferrier/fzf-z
-mvn
-supercrabtree/k
-zsh-users/zsh-syntax-highlighting
-EOBUNDLES
+antigen bundle git
+antigen bundle docker 
+antigen bundle pip
+antigen bundle lein
+antigen bundle cp
+antigen bundle fasd
+antigen bundle supercrabtree/k
+#antigen bundle zsh-users/zsh-completions
 
-#local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
-#PROMPT='${ret_status} %{$fg[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
-
-#ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}git:(%{$fg[red]%}"
-#ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
-#ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗"
-#ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
-
+antigen bundle zsh-users/zsh-autosuggestions
+#antigen bundle andrewferrier/fzf-z
+antigen bundle mvn
+# antigen bundle zdharma/fast-syntax-highlighting
+#This has to be last bundle
+#antigen bundle zsh-users/zsh-syntax-highlighting
+# This should be after syntax higlighter 
+# antigen bundle history-substring-search
 antigen theme robbyrussell
-#antigen theme ys
+
 antigen apply
 
 #Added by Dharmesh
 
-#alias yd='python3 /Users/GreatGod/Videos/videos/youtube-dl'
-#For man page coloring
-#export LESS_TERMCAP_mb=$'\E[01;31m'
-#export LESS_TERMCAP_md=$'\E[01;31m'
-#export LESS_TERMCAP_me=$'\E[0m'
-#export LESS_TERMCAP_se=$'\E[0m'
-#export LESS_TERMCAP_so=$'\E[01;44;33m'
-#export LESS_TERMCAP_ue=$'\E[0m'
-#export LESS_TERMCAP_us=$'\E[01;32m'
 HIST_STAMPS="mm/dd/yyyy"
-#since its installed by brew and not in oh-my-zsh -- so that its easy to get updates
-#ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
-#source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 eval "$(fasd --init auto)"
+
+# because the plugin overrides k command alias
+source <(kubectl completion zsh)
+
+#test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+#[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
