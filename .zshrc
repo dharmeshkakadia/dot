@@ -15,6 +15,7 @@ pip
 lein
 cp
 fasd
+kubectl
 #history-substring-search
 #zsh-users/zsh-completions
 #andrewferrier/fzf-z
