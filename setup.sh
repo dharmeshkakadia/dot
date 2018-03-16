@@ -11,6 +11,8 @@ brew install asdf
 brew install watchman flow
 brew cask install ngrok
 
+brew install kubectx
+
 npm install -g react-native-cli yo
 
 apm install nuclide
