@@ -49,6 +49,9 @@ sudo spctl --master-disable
 # http://jeroenjanssens.com/2013/09/19/seven-command-line-tools-for-data-science.html
 # https://github.com/clarkgrubb/data-tools
 
+# https://apple.stackexchange.com/questions/159548/prevent-auto-pairing-for-certain-devices-bluetooth
+sudo defaults write /Library/Preferences/com.apple.Bluetooth.plist DontPageAudioDevices 1
+
 #Little command line REST client that you can use in pipelines
 #https://github.com/micha/resty
 ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" ~/bin/sublime
