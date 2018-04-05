@@ -12,7 +12,7 @@ brew install watchman flow
 brew cask install ngrok
 
 brew install kubectx
-
+brew install tree
 npm install -g react-native-cli yo
 
 apm install nuclide
