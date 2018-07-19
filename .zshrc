@@ -37,3 +37,25 @@ source <(kubectl completion zsh)
 #test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 #[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# from https://github.com/ahmetb/kubectl-aliases/blob/master/.kubectl_aliases
+alias k='kubectl'
+alias ksys='kubectl --namespace=kube-system'
+alias kex='kubectl exec -i -t'
+alias kp='kubectl proxy'
+alias kgpo='kubectl get pods'
+
+alias markasread='pockyt mod -a 1 -i redirect'
+
+confirm() {
+    # call with a prompt string or use a default
+    read "response?Are you sure? [y/N]"
+    case "$response" in
+        [yY][eE][sS]|[yY])
+            true
+            ;;
+        *)
+            false
+            ;;
+    esac
+}
