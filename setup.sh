@@ -1,7 +1,7 @@
 #[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 brew tap homebrew/science caskroom/versions
-brew install fasd wget R jq httpie youtube-dl m-cli fish hub
+brew install fasd wget R jq httpie youtube-dl m-cli fish hub exa csvkit bat 
 
 #brew install scala ruby
 brew install fzf
