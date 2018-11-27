@@ -46,6 +46,9 @@ alias kp='kubectl proxy'
 alias kgpo='kubectl get pods'
 
 alias markasread='pockyt mod -a 1 -i redirect'
+alias utc='date -u'
+alias cat='bat --theme=GitHub'
+alias l='exa --header --long --accessed  --created --modified --grid --git'
 
 confirm() {
     # call with a prompt string or use a default
