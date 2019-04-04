@@ -45,18 +45,6 @@ eval "$(fasd --init auto)"
 
 #[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-confirm() {
-    # call with a prompt string or use a default
-    read "response?Are you sure? [y/N]"
-    case "$response" in
-        [yY][eE][sS]|[yY])
-            true
-            ;;
-        *)
-            false
-            ;;
-    esac
-
 # from https://github.com/ahmetb/kubectl-aliases/blob/master/.kubectl_aliases
 alias k='kubectl'
 alias ksys='kubectl --namespace=kube-system'
@@ -112,6 +100,14 @@ deploy(){
     _label="-l job-name=${_name}"
   elif [ "${_kind}" = "sparkapplication" ]; then
     _label="-l sparkoperator.k8s.io/app-name=${_name},spark-role=driver"
+    while true; do 
+      (kubectl get pods ${_label} | grep ${_name}) >/dev/null 2>&1
+      if [[ "$?" -eq 0 ]]; then 
+        break
+      fi
+      echo "waiting for sparkapplication ${_name} to start.."
+      sleep 3
+    done
   elif [ "${_kind}" = "pod" ]; then
     _label=${_name}
   else
@@ -119,12 +115,12 @@ deploy(){
     kubectl get pods
     return 1
   fi
-
+  
   _wait="kubectl wait --for=condition=Ready --timeout=600s pod ${_label}"
   echo ${_wait}
   eval ${_wait}
   echo "done"
-
+  
   _pod="kubectl get pods ${_label} -o name | sed 's/pod\///'"
   _logs="kubectl logs -f $(eval $(echo ${_pod}))"
   echo ${_logs}
