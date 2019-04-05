@@ -94,6 +94,7 @@ deploy(){
   _kind=`yq r $1 kind | tr '[:upper:]' '[:lower:]'`
   _name=`yq r $1 metadata.name | tr '[:upper:]' '[:lower:]'`
   echo "Deploying ${_kind} : ${_name}"
+  kubectl delete -f $1 
   kubectl create -f $1 || return 1
 
   if [ "${_kind}" = "job" ]; then
@@ -119,7 +120,6 @@ deploy(){
   _wait="kubectl wait --for=condition=Ready --timeout=600s pod ${_label}"
   echo ${_wait}
   eval ${_wait}
-  echo "done"
   
   _pod="kubectl get pods ${_label} -o name | sed 's/pod\///'"
   _logs="kubectl logs -f $(eval $(echo ${_pod}))"
