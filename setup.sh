@@ -7,6 +7,7 @@ brew install fasd wget R jq httpie youtube-dl m-cli fish hub exa csvkit bat
 brew install fzf
 brew cask install java spotify chrome firefox dropbox sublime flux intellij-idea-ce vlc atom hyper webstorm
 brew install asdf
+brew install pandoc whalebrew
 #webdev
 brew install watchman flow
 brew cask install ngrok
