@@ -12,6 +12,9 @@ brew install asdf
 brew install watchman flow
 brew cask install ngrok
 
+# Python
+brew cask install anaconda
+
 brew install kubectx
 brew install tree
 npm install -g react-native-cli yo
