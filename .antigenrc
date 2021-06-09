@@ -14,6 +14,8 @@ antigen bundle fasd
 
 antigen bundle zsh-users/zsh-autosuggestions
 #antigen bundle andrewferrier/fzf-z
+# We have brew installed fzf
+antigen bundle pierpo/fzf-docker
 # antigen bundle mvn
 
 #This has to be last bundle
