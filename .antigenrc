@@ -18,6 +18,9 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle pierpo/fzf-docker
 # antigen bundle mvn
 
+# output of `poetry completions zsh > _poetry`
+antigen bundle /Users/dk/.antigen/bundles/poetry --no-local-clone
+
 #This has to be last bundle
 # antigen bundle zsh-users/zsh-syntax-highlighting
 # This one is better apparently
